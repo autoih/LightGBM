@@ -32,6 +32,8 @@ install:
   - conda update -q -y conda
   - conda create -q -y -n test-env python=%PYTHON_VERSION% joblib matplotlib numpy pandas psutil pytest python-graphviz scikit-learn scipy
   - activate test-env
+  - conda info
+  - conda list --show-channel-urls
 
 build_script:
   - cd %APPVEYOR_BUILD_FOLDER%\python-package
